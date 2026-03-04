@@ -1,1 +1,248 @@
-Test
+{
+    "metadata": {
+      "company_name": "NIKE, Inc.",
+      "ticker": "NKE",
+      "cik": "320187",
+      "fiscal_year": 2025,
+      "filing_date": "2025-07-17",
+      "sector": "Consumer Discretionary",
+      "industry": "Footwear & Accessories",
+      "employee_count": 77800,
+      "auditor_name": "PricewaterhouseCoopers LLP",
+      "auditor_opinion_is_clean": true
+    },
+    "leadership_and_governance": {
+      "executives": [
+        {
+          "name": "Mark Parker",
+          "title": "Executive Chairman",
+          "age": 69,
+          "year_appointed": 2020
+        },
+        {
+          "name": "Elliott Hill",
+          "title": "President and Chief Executive Officer",
+          "age": 61,
+          "year_appointed": 2024
+        },
+        {
+          "name": "Matthew Friend",
+          "title": "Executive Vice President and Chief Financial Officer",
+          "age": 47,
+          "year_appointed": 2020
+        },
+        {
+          "name": "Treasure Heinle",
+          "title": "Executive Vice President, Chief People Officer",
+          "age": 55,
+          "year_appointed": 2025
+        },
+        {
+          "name": "Rob Leinwand",
+          "title": "Executive Vice President, Chief Legal Officer",
+          "age": 57,
+          "year_appointed": 2024
+        },
+        {
+          "name": "Phil McCartney",
+          "title": "Executive Vice President, Chief Innovation, Design & Product Officer",
+          "age": 50,
+          "year_appointed": 2025
+        },
+        {
+          "name": "Amy Montagne",
+          "title": "President, Nike",
+          "age": 53,
+          "year_appointed": 2025
+        },
+        {
+          "name": "Craig Williams",
+          "title": "Executive Vice President, Chief Commercial Officer",
+          "age": 56,
+          "year_appointed": 2025
+        }
+      ],
+      "board_of_directors": [
+        {
+          "name": "Timothy Cook",
+          "is_independent": true,
+          "tenure_years": 20
+        },
+        {
+          "name": "Cathleen Benko",
+          "is_independent": true
+        },
+        {
+          "name": "Thasunda Duckett",
+          "is_independent": true
+        },
+        {
+          "name": "Mónica Gil",
+          "is_independent": true
+        },
+        {
+          "name": "Maria Henry",
+          "is_independent": true
+        },
+        {
+          "name": "Peter Henry",
+          "is_independent": true
+        },
+        {
+          "name": "Travis Knight",
+          "is_independent": false
+        },
+        {
+          "name": "Michelle Peluso",
+          "is_independent": true
+        },
+        {
+          "name": "John Rogers, Jr.",
+          "is_independent": true
+        },
+        {
+          "name": "Robert Swan",
+          "is_independent": true
+        }
+      ],
+      "recent_turnover": [
+        {
+          "name": "John Donahoe II",
+          "former_title": "President and Chief Executive Officer",
+          "departure_date": "2024-10-13",
+          "reason_given": "Retirement"
+        },
+        {
+          "name": "Heidi O'Neill",
+          "former_title": "President, Consumer, Product & Brand",
+          "departure_date": "2025-05-01",
+          "reason_given": "Transition/Departure"
+        }
+      ]
+    },
+    "financial_metrics": {
+      "income_statement": {
+        "revenue": 46309000000,
+        "cost_of_goods_sold": 26519000000,
+        "gross_profit": 19790000000,
+        "operating_expenses": {
+          "selling_general_and_administrative": 16088000000,
+          "depreciation_and_amortization": 775000000
+        },
+        "operating_income": 3778000000,
+        "interest_expense": -107000000,
+        "pre_tax_income": 3885000000,
+        "income_tax_expense": 666000000,
+        "net_income": 3219000000,
+        "shares_outstanding_diluted": 1487600000,
+        "eps_diluted": 2.16
+      },
+      "balance_sheet": {
+        "assets": {
+          "current_assets": {
+            "cash_and_equivalents": 7464000000,
+            "short_term_investments": 1687000000,
+            "net_receivables": 4717000000,
+            "inventory": 7489000000,
+            "total_current_assets": 23362000000
+          },
+          "non_current_assets": {
+            "property_plant_equipment_net": 4828000000,
+            "goodwill_and_intangibles": 499000000,
+            "total_non_current_assets": 13217000000
+          },
+          "total_assets": 36579000000
+        },
+        "liabilities": {
+          "current_liabilities": {
+            "accounts_payable": 3479000000,
+            "short_term_debt": 5000000,
+            "total_current_liabilities": 10566000000
+          },
+          "non_current_liabilities": {
+            "long_term_debt": 7961000000,
+            "total_non_current_liabilities": 12800000000
+          },
+          "total_liabilities": 23366000000
+        },
+        "equity": {
+          "retained_earnings": -727000000,
+          "total_stockholders_equity": 13213000000
+        }
+      },
+      "cash_flow_statement": {
+        "operating_activities": {
+          "net_income_starting_line": 3219000000,
+          "stock_based_compensation": 709000000,
+          "change_in_working_capital": -787000000,
+          "total_cash_from_operating_activities": 3698000000
+        },
+        "investing_activities": {
+          "capital_expenditure": 430000000,
+          "total_cash_from_investing_activities": -275000000
+        },
+        "financing_activities": {
+          "dividends_paid": 2300000000,
+          "stock_repurchased": 2985000000,
+          "debt_issued_or_repaid": -1001000000,
+          "total_cash_from_financing_activities": -5820000000
+        },
+        "free_cash_flow": 3268000000
+      },
+      "capital_allocation_summary": {
+        "total_shareholder_yield": 5285000000
+      }
+    },
+    "textual_sections": [
+      {
+        "item_id": "Item 1 (Business)",
+        "content_chunks": [
+          {
+            "chunk_index": 0,
+            "sub_header": "General",
+            "text": "NIKE, Inc. was incorporated in 1967 under the laws of the State of Oregon. Our principal business activity is the design, development and worldwide marketing and selling of athletic footwear, apparel, equipment, accessories and services. NIKE is the largest seller of athletic footwear and apparel in the world."
+          },
+          {
+            "chunk_index": 1,
+            "sub_header": "Products",
+            "text": "We offer our products under the NIKE, Jordan and Converse brands. Our strategy is to achieve sustainable, profitable long-term growth by leading with sport, creating innovative, 'must-have' products, building deep personal consumer connections with our brands and delivering compelling consumer experiences through digital platforms and at retail."
+          }
+        ]
+      },
+      {
+        "item_id": "Item 1A (Risk Factors)",
+        "content_chunks": [
+          {
+            "chunk_index": 0,
+            "sub_header": "Economic and Industry Risks",
+            "text": "Global economic conditions have in the past had and could in the future have a material adverse effect on our business, operating results and financial condition. The uncertain state of the global economy, including volatility in, and uncertainty regarding, inflation and interest rates and the risk of a recession, continues to impact businesses around the world."
+          }
+        ]
+      },
+      {
+        "item_id": "Item 7 (MD&A)",
+        "content_chunks": [
+          {
+            "chunk_index": 0,
+            "sub_header": "Overview",
+            "text": "NIKE designs, develops, markets and sells athletic footwear, apparel, equipment, accessories and services worldwide. We are the largest seller of athletic footwear and apparel in the world. Our goal is to deliver value to our shareholders by building a profitable global portfolio of branded footwear, apparel, equipment and accessories."
+          },
+          {
+            "chunk_index": 1,
+            "sub_header": "Fiscal 2025 Financial Highlights",
+            "text": "NIKE, Inc. Revenues for fiscal 2025 were $46.3 billion compared to $51.4 billion for fiscal 2024. NIKE Direct revenues declined 13% from $21.5 billion in fiscal 2024 to $18.8 billion in fiscal 2025."
+          }
+        ]
+      },
+      {
+        "item_id": "Item 9A (Controls and Procedures)",
+        "content_chunks": [
+          {
+            "chunk_index": 0,
+            "sub_header": "Evaluation of Disclosure Controls and Procedures",
+            "text": "Our Chief Executive Officer and Chief Financial Officer concluded that our disclosure controls and procedures were effective at the reasonable assurance level as of May 31, 2025."
+          }
+        ]
+      }
+    ]
+  }
