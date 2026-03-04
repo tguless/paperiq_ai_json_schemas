@@ -1,0 +1,236 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Master SEC 10-K Hybrid Reporting and Vector Schema",
+  "description": "A comprehensive schema designed for PostgreSQL JSONB fundamental analysis and PGVector narrative retrieval.",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "description": "Core identifiers and high-level red flags.",
+      "properties": {
+        "company_name": { "type": "string" },
+        "ticker": { "type": "string" },
+        "cik": { "type": "string", "description": "Central Index Key" },
+        "fiscal_year": { "type": "integer" },
+        "filing_date": { "type": "string", "format": "date" },
+        "sector": { "type": "string" },
+        "industry": { "type": "string" },
+        "employee_count": { "type": "integer" },
+        "auditor_name": { "type": "string" },
+        "auditor_opinion_is_clean": { "type": "boolean", "description": "False indicates a qualified or adverse opinion." }
+      },
+      "required": ["company_name", "ticker", "cik", "fiscal_year"]
+    },
+    "leadership_and_governance": {
+      "type": "object",
+      "description": "Key personnel and turnover metrics for evaluating management stability.",
+      "properties": {
+        "executives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "title": { "type": "string" },
+              "age": { "type": "integer" },
+              "year_appointed": { "type": "integer" }
+            }
+          }
+        },
+        "board_of_directors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "is_independent": { "type": "boolean" },
+              "tenure_years": { "type": "integer" }
+            }
+          }
+        },
+        "recent_turnover": {
+          "type": "array",
+          "description": "Tracks C-suite or board departures mentioned in the filing.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "former_title": { "type": "string" },
+              "departure_date": { "type": "string", "format": "date" },
+              "reason_given": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "financial_metrics": {
+      "type": "object",
+      "description": "Granular fundamentals standardized for deep SQL ratio analysis.",
+      "properties": {
+        "income_statement": {
+          "type": "object",
+          "properties": {
+            "revenue": { "type": "number", "description": "Top line sales" },
+            "cost_of_goods_sold": { "type": "number" },
+            "gross_profit": { "type": "number" },
+            "operating_expenses": {
+              "type": "object",
+              "properties": {
+                "research_and_development": { "type": "number" },
+                "selling_general_and_administrative": { "type": "number" },
+                "depreciation_and_amortization": { "type": "number" }
+              }
+            },
+            "operating_income": { "type": "number", "description": "EBIT" },
+            "interest_expense": { "type": "number" },
+            "pre_tax_income": { "type": "number" },
+            "income_tax_expense": { "type": "number" },
+            "net_income": { "type": "number", "description": "Bottom line" },
+            "shares_outstanding_diluted": { "type": "number" },
+            "eps_diluted": { "type": "number" }
+          }
+        },
+        "balance_sheet": {
+          "type": "object",
+          "properties": {
+            "assets": {
+              "type": "object",
+              "properties": {
+                "current_assets": {
+                  "type": "object",
+                  "properties": {
+                    "cash_and_equivalents": { "type": "number" },
+                    "short_term_investments": { "type": "number" },
+                    "net_receivables": { "type": "number" },
+                    "inventory": { "type": "number" },
+                    "total_current_assets": { "type": "number" }
+                  }
+                },
+                "non_current_assets": {
+                  "type": "object",
+                  "properties": {
+                    "property_plant_equipment_net": { "type": "number" },
+                    "goodwill_and_intangibles": { "type": "number" },
+                    "total_non_current_assets": { "type": "number" }
+                  }
+                },
+                "total_assets": { "type": "number" }
+              }
+            },
+            "liabilities": {
+              "type": "object",
+              "properties": {
+                "current_liabilities": {
+                  "type": "object",
+                  "properties": {
+                    "accounts_payable": { "type": "number" },
+                    "short_term_debt": { "type": "number" },
+                    "total_current_liabilities": { "type": "number" }
+                  }
+                },
+                "non_current_liabilities": {
+                  "type": "object",
+                  "properties": {
+                    "long_term_debt": { "type": "number" },
+                    "deferred_revenue_non_current": { "type": "number" },
+                    "total_non_current_liabilities": { "type": "number" }
+                  }
+                },
+                "total_liabilities": { "type": "number" }
+              }
+            },
+            "equity": {
+              "type": "object",
+              "properties": {
+                "retained_earnings": { "type": "number" },
+                "total_stockholders_equity": { "type": "number" }
+              }
+            }
+          }
+        },
+        "cash_flow_statement": {
+          "type": "object",
+          "properties": {
+            "operating_activities": {
+              "type": "object",
+              "properties": {
+                "net_income_starting_line": { "type": "number" },
+                "stock_based_compensation": { "type": "number" },
+                "change_in_working_capital": { "type": "number" },
+                "total_cash_from_operating_activities": { "type": "number" }
+              }
+            },
+            "investing_activities": {
+              "type": "object",
+              "properties": {
+                "capital_expenditure": { "type": "number", "description": "CapEx" },
+                "total_cash_from_investing_activities": { "type": "number" }
+              }
+            },
+            "financing_activities": {
+              "type": "object",
+              "properties": {
+                "dividends_paid": { "type": "number" },
+                "stock_repurchased": { "type": "number" },
+                "debt_issued_or_repaid": { "type": "number" },
+                "total_cash_from_financing_activities": { "type": "number" }
+              }
+            },
+            "free_cash_flow": { "type": "number", "description": "Operating Cash Flow minus CapEx" }
+          }
+        },
+        "capital_allocation_summary": {
+          "type": "object",
+          "description": "Quick access metrics showing how management treats shareholders.",
+          "properties": {
+            "total_shareholder_yield": { "type": "number", "description": "Dividends + Buybacks" },
+            "r_and_d_to_revenue_ratio": { "type": "number", "description": "R&D Spend / Revenue" }
+          }
+        }
+      }
+    },
+    "textual_sections": {
+      "type": "array",
+      "description": "Narrative sections organized for RAG and PGVector chunking.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "enum": [
+              "Item 1 (Business)", 
+              "Item 1A (Risk Factors)",
+              "Item 1B (Unresolved Staff Comments)", 
+              "Item 3 (Legal Proceedings)", 
+              "Item 7 (MD&A)", 
+              "Item 7A (Quantitative and Qualitative Disclosures About Market Risk)",
+              "Item 9A (Controls and Procedures)",
+              "Item 10 (Directors, Executive Officers and Corporate Governance)",
+              "Item 11 (Executive Compensation)"
+            ]
+          },
+          "content_chunks": {
+            "type": "array",
+            "description": "Pre-segmented text blocks (e.g., paragraph level) ready to be embedded via LLM.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "chunk_index": { "type": "integer" },
+                "sub_header": { "type": "string", "description": "Provides local context to the chunk for better vector retrieval." },
+                "text": { "type": "string" }
+              },
+              "required": ["chunk_index", "text"]
+            }
+          }
+        },
+        "required": ["item_id", "content_chunks"]
+      }
+    }
+  },
+  "required": [
+    "metadata", 
+    "leadership_and_governance", 
+    "financial_metrics", 
+    "textual_sections"
+  ]
+}
